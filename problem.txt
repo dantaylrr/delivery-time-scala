@@ -1,0 +1,13 @@
+Given a list of orders, output how many days each order will take until the item is received by the person who bought it.
+
+Criteria:
+
+- Packaging an item takes half a day.
+- Carrying an item to the post office takes a quarter of a day.
+- The post office takes 2 days to deliver an item.
+- The seller can only pack & carry one item at a time.
+- The output for an item must be presented in whole days, rounded up.
+
+For example:
+The 1st order will take 3 whole days (1/2 + 1/4 + 2 = 2 3/4, rounded up).
+The 2nd order will take 4 whole days (1/2 + 1/4 + 1/2 + 1/4 + 2 = 3 1/2, rounded up).

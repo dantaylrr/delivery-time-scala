@@ -10,13 +10,9 @@ case class Delivery(inputs: List[String] = List.empty[String]) {
   }
 
   def calculateDeliveryTime(orderNumbers: List[Int]): List[Int] = {
-    val timeObject = Time()
-    val packagingTime = timeObject.packaging
-    val carryingTime = timeObject.carrying
-    val postageTime = timeObject.posting
 
     import math.ceil
-    val result = orderNumbers.map(order => ((order * packagingTime) + (order * carryingTime) + postageTime).ceil.toInt)
+    val result = orderNumbers.map(order => ((order * Time().packaging) + (order * Time().carrying) + Time().posting).ceil.toInt)
     result
   }
 
